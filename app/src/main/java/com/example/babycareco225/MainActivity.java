@@ -24,12 +24,19 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//btnMemories=findViewById(R.id.btnMemories);
+btnMemories=findViewById(R.id.btnmemories);
 btnBMI=findViewById(R.id.btnBMI);
 
 
 
+btnMemories.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View view) {
+        Intent myIntent = new Intent(view.getContext(), DetailsActivity.class);
+        startActivityForResult(myIntent, 0);
 
+    }
+});
         btnschedule = findViewById(R.id.btnSchedule);
 
         btnschedule.setOnClickListener(new View.OnClickListener() {

@@ -24,7 +24,7 @@
             android:rowCount="3">
 
             <Button
-                android:id="@+id/btnGraph"
+                android:id="@+id/btnmemories"
                 android:layout_height="100sp"
                 android:layout_columnWeight="1"
                 android:layout_gravity="fill"

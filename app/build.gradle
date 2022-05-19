@@ -7,7 +7,9 @@ plugins {
 
 android {
     compileSdk 32
-
+    packagingOptions {
+        resources.excludes.add("META-INF/*")
+    }
     defaultConfig {
         applicationId "com.example.babycareco225"
         minSdk 21
@@ -64,4 +66,7 @@ dependencies {
 
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    androidTestImplementation 'org.junit.jupiter:junit-jupiter:5.9.0-M1'
+    androidTestImplementation 'org.junit.jupiter:junit-jupiter:5.9.0-M1'
+    androidTestImplementation 'org.junit.jupiter:junit-jupiter'
 }

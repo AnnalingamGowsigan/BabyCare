@@ -2,7 +2,14 @@ package com.example.babycareco225;
 
 public class Vaccination {
 
+
     private String name;
+    public Vaccination(){};
+
+    public Vaccination(String name, String age) {
+        this.name = name;
+        this.age = age;
+    }
 
     public String getName() {
         return name;
