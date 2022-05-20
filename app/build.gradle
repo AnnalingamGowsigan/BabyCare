@@ -35,6 +35,7 @@ android {
 
 dependencies {
 
+
     //implementation 'com.firebaseui:firebase-ui-auth:4.3.2'
     // Import the BoM for the Firebase platform
     implementation platform('com.google.firebase:firebase-bom:29.1.0')
@@ -64,7 +65,8 @@ dependencies {
     implementation 'com.google.firebase:firebase-database:20.0.5'
     testImplementation 'junit:junit:4.13.2'
 
-    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'androidx.test:rules:1.4.0'
+    androidTestImplementation 'androidx.test:runner:1.4.0'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     androidTestImplementation 'org.junit.jupiter:junit-jupiter:5.9.0-M1'
     androidTestImplementation 'org.junit.jupiter:junit-jupiter:5.9.0-M1'

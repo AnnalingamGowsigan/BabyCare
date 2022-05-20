@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class BMIActivity extends AppCompatActivity {
     private EditText height;
@@ -32,25 +33,35 @@ public class BMIActivity extends AppCompatActivity {
     }
     public void CalculateBMI(View v){
 
+        try {
+            String h=height.getText().toString();
+            String w =weight.getText().toString();
 
-        String h=height.getText().toString();
-        String w =weight.getText().toString();
+            if(h!=null && !"".equals(h)&& w!=null && !"".equals(w)){
 
-        if(h!=null && !"".equals(h)&& w!=null && !"".equals(w)){
+                float hf= Float.parseFloat(h);
+                float wf= Float.parseFloat(w);
 
-            float hf= Float.parseFloat(h);
-            float wf= Float.parseFloat(w);
-
-            float bmi=(wf/(hf*hf))*10000;
-            String lbl="";
-            if(bmi<=18.5) {lbl="Under Weight ";}
-            else if(bmi>18.5 &&bmi<=24.99){ lbl="Normal";}
-            else {lbl ="Obesity";}
-            result.setText(bmi +"\n\n"+lbl);
+                float bmi=(wf/(hf*hf))*10000;
+                String lbl="";
+                if(bmi<=18.5) {lbl="Under Weight ";}
+                else if(bmi>18.5 &&bmi<=24.99){ lbl="Normal";}
+                else {lbl ="Obesity";}
+                result.setText(bmi +"\n\n"+lbl);
 
 
 
+            }
+
+
+
+
+        } catch(Exception e){
+            Toast.makeText(BMIActivity.this, e.toString(), Toast.LENGTH_SHORT).show();
         }
+
+
+
 
 
     }

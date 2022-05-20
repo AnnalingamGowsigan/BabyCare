@@ -1,8 +1,11 @@
 package com.example.babycareco225;
+import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.Exclude;
+import com.google.firebase.database.FirebaseDatabase;
+
 import java.util.Date;
 
-public class Baby {
+public class Baby  implements Runnable{
     public Baby(){}
     public Baby(String id, int age, String name, float height, float weight) {
         this.id = id;
@@ -67,4 +70,10 @@ public class Baby {
     private float height;
     private float weight;
     private Date dateofBirth;
+    private DatabaseReference mdatabaseReference;
+
+    public void run(){
+        mdatabaseReference= FirebaseDatabase.getInstance().getReference().child("baby");
+        mdatabaseReference.push().setValue(this);
+    }
 }

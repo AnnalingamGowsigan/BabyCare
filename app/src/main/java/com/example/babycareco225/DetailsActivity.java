@@ -3,7 +3,9 @@ package com.example.babycareco225;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -24,6 +26,7 @@ public class DetailsActivity extends AppCompatActivity {
     Button btnDetails;
     EditText babyName;
     private DatabaseReference mdatabaseReference;
+    private int year2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,18 +37,21 @@ public class DetailsActivity extends AppCompatActivity {
         btnDetails=findViewById(R.id.btndetails);
         Date d=new Date();
         int year1=d.getYear();
-        final int[] babyyear = {0};
+
         mdatabaseReference= FirebaseDatabase.getInstance().getReference().child("baby");
 
 
         dob.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+
                 final Calendar calendar= Calendar.getInstance();
                 int date=calendar.get(Calendar.DAY_OF_MONTH);
                 int month=calendar.get(Calendar.MONTH);
-            int  year=calendar.get(Calendar.YEAR);
-                babyyear[0] =year;
+          int  year=calendar.get(Calendar.YEAR);
+               year2= year ;
+
 
                 picker=new DatePickerDialog(DetailsActivity.this, new DatePickerDialog.OnDateSetListener() {
                     @Override
@@ -67,7 +73,7 @@ public class DetailsActivity extends AppCompatActivity {
                 // baby.setName((EditText)findViewById(R.id.Babyname).toString());
                 babyName = (EditText)findViewById(R.id.Babyname);
                 baby.setName(babyName.getText().toString());
-                baby.setAge(year1-babyyear[0]);
+                baby.setAge(1);
               EditText babyheight=(EditText)findViewById(R.id.height);
               baby.setHeight(Integer.parseInt(babyheight.getText().toString()));
 
@@ -75,13 +81,17 @@ public class DetailsActivity extends AppCompatActivity {
                 baby.setWeight(Integer.parseInt(babyweight.getText().toString()));
 
                 ///baby.setId(mdatabaseReference.push().getKey());
-               mdatabaseReference.push().setValue(baby);
-                Toast.makeText(DetailsActivity.this,"Data Addede sucessfully,To", Toast.LENGTH_SHORT);
-
+                Thread myThread=new Thread(baby);
+             myThread.start();
+            Toast.makeText(DetailsActivity.this,"Data Addede sucessfully,To", Toast.LENGTH_SHORT);
+                Intent myIntent = new Intent(view.getContext(), MainActivity.class);
+                startActivityForResult(myIntent, 0);
 
 
             }
 
         });
     }
+
+
 }

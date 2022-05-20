@@ -11,6 +11,12 @@ class VaccinationTest {
 
         Vaccination v= new Vaccination("Polio","2 months");
         assertEquals("Polio",v.getName());
+        assertEquals("Polio",v.getName());
+
+        assertEquals("Polio",v.getName());
+
+        assertEquals("Polio",v.getName());
+
     }
 
     @Test
