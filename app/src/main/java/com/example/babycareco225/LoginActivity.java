@@ -37,6 +37,7 @@ public class LoginActivity extends AppCompatActivity {
     FirebaseUser mUser;
     ProgressDialog mLoadingBar;
     GoogleSignInClient mGoogleSignInClient;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,6 +56,11 @@ checkCredential();
         mAuth=FirebaseAuth.getInstance();
 
         mUser= mAuth.getCurrentUser();
+        // Check if user is signed in (non-null) and update UI accordingly.
+//        if(mUser != null){
+//            reload();
+//        }
+
         mLoadingBar=new ProgressDialog(LoginActivity.this);
 
         btn.setOnClickListener(new View.OnClickListener() {
@@ -76,7 +82,6 @@ checkCredential();
             @Override
             public void onClick(View view) {
                 signIn();
-
             }
         });
 
@@ -162,6 +167,7 @@ checkCredential();
                             FirebaseUser user = mAuth.getCurrentUser();
                             Toast.makeText(LoginActivity.this,user.getEmail()+user.getDisplayName(),Toast.LENGTH_SHORT).show();
                             updateUI(user);
+                            System.out.println("SignIn");
                         } else {
                             // If sign in fails, display a message to the user.
                             Toast.makeText(LoginActivity.this, task.getException().toString(), Toast.LENGTH_SHORT).show();
