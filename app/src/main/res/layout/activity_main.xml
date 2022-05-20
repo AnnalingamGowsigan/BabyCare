@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/loginimg"
+     >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="83dp">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="6sp"
+            android:columnCount="2"
+            android:padding="30dp"
+            android:rowCount="4">
+
+            <Button
+                android:id="@+id/btnmemories"
+                android:layout_height="100sp"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:layout_margin="20sp"
+                android:background="@color/design_default_color_surface"
+                android:text="Weight\nTracker">
+
+
+            </Button>
+
+            <Button
+                android:id="@+id/btnheightTracker"
+                android:layout_height="100sp"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:layout_margin="20sp"
+                android:background="@color/design_default_color_surface"
+
+                android:text="Height\nTracker">
+
+
+            </Button>
+
+            <Button
+                android:id="@+id/btnSchedule"
+
+                android:layout_height="100sp"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:layout_margin="20sp"
+                android:background="@color/design_default_color_surface"
+                android:text="Vaccination\nScedule">
+
+
+            </Button>
+
+            <Button
+                android:id="@+id/btnConsultancy"
+                android:layout_height="100sp"
+
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:layout_margin="20sp"
+                android:background="@color/design_default_color_surface"
+                android:text="Doctor\nConsultancy">
+
+
+            </Button>
+
+            <Button
+                android:id="@+id/btnBMI"
+                android:layout_height="100sp"
+
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:layout_margin="20sp"
+                android:background="@color/design_default_color_surface"
+                android:text="BMI\nCalculator">
+
+
+            </Button>
+
+
+            <Button
+                android:id="@+id/btnprofile"
+                android:layout_height="100sp"
+
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:layout_margin="20sp"
+                android:background="@color/design_default_color_surface"
+                android:text="Memories">
+
+
+            </Button>
+
+
+            <Button
+                android:id="@+id/btnHealthTiips"
+                android:layout_height="100sp"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:layout_margin="20sp"
+                android:background="@color/design_default_color_surface"
+                android:text="Healthy\nTips">
+
+
+            </Button>
+
+            <Button
+                android:id="@+id/btnprofileManagement"
+                android:layout_height="100sp"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:layout_margin="20sp"
+                android:background="@color/design_default_color_surface"
+                android:text="Profile\nManager">
+
+
+            </Button>
+
+
+        </GridLayout>
+
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
