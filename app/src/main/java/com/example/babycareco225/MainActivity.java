@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     Button btnGraph;
     Button btnprofileManager;
     Button btnBMI;
+    Button btnHealthytips;
 
 
 
@@ -25,8 +26,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btnprofileManager=findViewById(R.id.btnprofileManagement);
+        btnprofileManager=findViewById(R.id.btnProfilemanager);
 btnBMI=findViewById(R.id.btnBMI);
+btnHealthytips=findViewById(R.id.btnHealthTiips);
 
 
 
@@ -54,6 +56,13 @@ btnBMI=findViewById(R.id.btnBMI);
         btnBMI.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent myIntent = new Intent(view.getContext(), BMIActivity.class);
+                startActivityForResult(myIntent, 0);
+            }
+
+        });
+        btnHealthytips.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Intent myIntent = new Intent(view.getContext(), HealthyTips.class);
                 startActivityForResult(myIntent, 0);
             }
 

@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Babycareco225">
         <activity
+            android:name=".HealthyTips"
+            android:exported="false" />
+        <activity
             android:name=".BMIActivity"
             android:exported="false"
             android:parentActivityName=".MainActivity" />

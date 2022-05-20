@@ -114,6 +114,7 @@ checkCredential();
 
 
                     } else {
+
                         Toast.makeText(LoginActivity.this, task.getException().toString(), Toast.LENGTH_SHORT).show();
 
                     }

@@ -24,7 +24,7 @@
             android:rowCount="4">
 
             <Button
-                android:id="@+id/btnmemories"
+                android:id="@+id/btnHeight"
                 android:layout_height="100sp"
                 android:layout_columnWeight="1"
                 android:layout_gravity="fill"
@@ -103,6 +103,18 @@
 
 
             <Button
+                android:id="@+id/btnProfilemanager"
+                android:layout_height="100sp"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:layout_margin="20sp"
+                android:background="@color/design_default_color_surface"
+                android:text="profile\nManager">
+
+
+            </Button>
+
+            <Button
                 android:id="@+id/btnHealthTiips"
                 android:layout_height="100sp"
                 android:layout_columnWeight="1"
@@ -110,18 +122,6 @@
                 android:layout_margin="20sp"
                 android:background="@color/design_default_color_surface"
                 android:text="Healthy\nTips">
-
-
-            </Button>
-
-            <Button
-                android:id="@+id/btnprofileManagement"
-                android:layout_height="100sp"
-                android:layout_columnWeight="1"
-                android:layout_gravity="fill"
-                android:layout_margin="20sp"
-                android:background="@color/design_default_color_surface"
-                android:text="Profile\nManager">
 
 
             </Button>
