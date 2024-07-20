@@ -22,6 +22,10 @@ This project involves building a mobile application to track and manage the deve
 - **Database Development**: Designed and implemented the database schema in Firebase to store user and baby information securely.
 - **Backend Implementation**: Developed the backend logic using Java to handle data processing, notifications, and user authentication.
 
+## Data Flow
+
+![## Data Flow Diagram](wiki_image/dataflow.jpeg)
+
 ## User Interface
 
 Here are some screenshots of the application:
