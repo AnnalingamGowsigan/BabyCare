@@ -1,15 +1,49 @@
-# BabyCare
+# Baby Development Tracking System
 
-***
-  
-This is an ongoing project by a team of  Computer Engineering undergraduates of the University of Peradeniya to design and build an Android mobile application.
+## Technologies Used
 
-<img width="337" alt="Screenshot 2023-05-21 at 18 39 08" src="https://github.com/rasathuraikaran/BabyCare/assets/73582838/eb3cafc0-1405-48e7-a855-2477ee47cdf2">
-<img width="255" alt="Screenshot 2023-05-19 at 10 00 10" src="https://github.com/rasathuraikaran/BabyCare/assets/73582838/7ee51ce7-ba6d-4389-afab-ada0fb94ace4">
+- **Android Studio**: Integrated Development Environment (IDE) for Android development.
+- **Firebase**: Backend as a service, providing database, authentication, and hosting.
+- **Java**: Programming language used for developing the application.
 
+## Project Overview
 
-<img width="271" alt="Screenshot 2023-05-19 at 10 01 25" src="https://github.com/rasathuraikaran/BabyCare/assets/73582838/9fbba7d2-326a-4e6a-a6c4-b93f6fd49417">
-<img width="271" alt="Screenshot 2023-05<img width="271" alt="Screenshot 2023-05-19 at 10 01 14" src="https://github.com/rasathuraikaran/BabyCare/assets/73582838/42a45c67-3032-4f53-8108-9f8b57439264">
+This project involves building a mobile application to track and manage the development of babies aged 0 to 5 years. The application allows parents or guardians to register their babies, input their details, and track their growth and vaccination schedules.
 
-<img width="242" alt="Screenshot 2023-05-19 at 10 00 04" src="https://github.com/rasathuraikaran/BabyCare/assets/73582838/0d00a89e-60d7-40ae-a093-7f26434779bd">
-<img width="263" alt="Screenshot 2023-05-19 at 09 59 56" src="https://github.com/rasathuraikaran/BabyCare/assets/73582838/e290fee7-cab7-4b08-a34c-97b917ef2f68">
+## Features
+
+- **User Registration**: Allows users to register their babies with details like name, birth date, gender, current weight, and height.
+- **Vaccination Tracking**: Users can enter vaccination records and receive reminders for upcoming vaccinations based on a standard vaccine schedule.
+- **Growth Tracking**: Users can track their babies' weight and height and compare these measurements with standard ranges for their age.
+
+## Contribution
+
+- **System Design**: Created the overall system architecture and user interface design.
+- **Database Development**: Designed and implemented the database schema in Firebase to store user and baby information securely.
+- **Backend Implementation**: Developed the backend logic using Java to handle data processing, notifications, and user authentication.
+
+## User Interface
+
+Here are some screenshots of the application:
+
+<img src="images/login.png" alt="login_ui" width="300" height="500">
+
+<br><br>
+
+<img src="images/home.png" alt="home_ui" width="300" height="500">
+
+<br><br>
+
+<img src="images/BabyDetails.png" alt="baby_details_ui" width="300" height="500">
+
+<br><br>
+
+<img src="images/BmiCalculator.png" alt="bmi_calculator_ui" width="300" height="500">
+
+<br><br>
+
+<img src="images/tracker.png" alt="tracker_ui" width="300" height="500">
+
+<br><br>
+
+<img src="images/vaccinationsDetails.png" alt="vaccination_details_ui" width="300" height="500">
